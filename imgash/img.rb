@@ -4,7 +4,7 @@ require 'imash'
 module Imgash
 	class Img < Sinatra::Application
 
-		get '/img' do
+		get '/img.png' do
 
 			name = params[:name] || (0...50).map { ('a'..'z').to_a[rand(26)] }.join
 			send_file(get_path_to_img(name))
